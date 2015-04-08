@@ -12,35 +12,51 @@
   };
 
   DonutShop.prototype.donutperhour = function () {
+    console.log("donuthour");
     var numbCustomer = Math.floor(Math.random() * this.maxCus - this.minCus) + this.minCus;
     return Math.round(numbCustomer * this.average);
   };
 
   DonutShop.prototype.donutperday = function() {
-  var total=0
+  console.log("donuthour")
+  var total=0;
   for (var i=0; i < this.hoursOpen; i++) {
-    total += this.donutperhour();
+    var dPH = this.donutperhour();
+    total += dPH;
+    this.hourTotal.push(dPH);
+
   };
   return total;
   }
 
   DonutShop.prototype.render = function() {
-    var dayTotal = this.donutperday();
-    var elTr = document.getElementById(this.store);
-    for (var i = 0; i <= this.hourTotal.length; i++) {
-      var el = document.createElement('td');
-      el.textContent = this.hourTotal[i];
-      elTr.appendChild(el);
-      el.textContent = dayTotal;
-      elTr.appendChild(el);
-    }
-  };
+    var row = document.createElement("tr");
+    var data = document.createElement("td");
+      data.textContent = this.store;
+      row.appendChild(data);
+    for (var i = 0; i < this.hourTotal.length ; i++) {
+        data=document.createElement("td");
+      data.textContent = this.hourTotal[i];
+      row.appendChild(data);
+    };
+    data = document.createElement('td');
+    data.textContent = this.donutperday();
+    row.appendChild(data);
 
-  var downtown = new DonutShop(8, 43, 4.50, "1");
-  var capitolHill = new DonutShop(4, 37, 2.00, "2");
-  var slu = new DonutShop(9, 23, 6.33, "3");
-  var wedgewood = new DonutShop(2, 28, 1.25, "4");
-  var ballard = new DonutShop(8, 58, 3.75, "5");
+
+  document.getElementById('table-body').appendChild(row);
+};
+  var downtown = new DonutShop(8, 43, 4.50, 'Downtown');
+  var capitolHill = new DonutShop(4, 37, 2.00, 'Capitol Hill');
+  var slu = new DonutShop(9, 23, 6.33, 'SLU');
+  var wedgewood = new DonutShop(2, 28, 1.25, 'Wedgwood');
+  var ballard = new DonutShop(8, 58, 3.75, 'Ballard');
+
+  downtown.donutperday();
+  capitolHill.donutperday();
+  slu.donutperday();
+  wedgewood.donutperday();
+  ballard.donutperday();
 
   downtown.render();
   capitolHill.render();
