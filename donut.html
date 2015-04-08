@@ -3,16 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <title>Donut Shop</title>
+  <link rel="stylesheet" href="donut.css">
 </head>
 <body>
-  <table>
-    <tr id='hours'><th></th><td>7:00 AM</td><td>8:00 AM</td><td>9:00 AM</td><td>10:00 AM</td><td>11:00 AM</td><td>12:00 PM</td><td>1:00 PM</td><td>2:00 PM</td><td>3:00 PM</td><td>4:00 PM</td><td>5:00 PM</td><td>6:00 PM</td><td>Total</td>
-    <tr id="1"><th>Downtown</th></tr>
-    <tr id="2"><th>Capitol Hill</th></tr>
-    <tr id="3"><th>SLU</th></tr>
-    <tr id="4"><th>Wedgewood</th></tr>
-    <tr id="5"><th>Ballard</th></tr>
+  <table id ="table">
+    <tr id="hours">
+      <th>
+      </th>
+        <td>7:00 AM</td>
+        <td>8:00 AM</td>
+        <td>9:00 AM</td>
+        <td>10:00 AM</td>
+        <td>11:00 AM</td>
+        <td>12:00 PM</td>
+        <td>1:00 PM</td>
+        <td>2:00 PM</td>
+        <td>3:00 PM</td>
+        <td>4:00 PM</td>
+        <td>5:00 PM</td>
+        <td>6:00 PM</td>
+        <td>Total</td>
+    <tr class="1">
+      <th>Downtown</th>
+    </tr>
+    <tr id="2">
+      <th>Capitol Hill</th>
+    </tr>
+    <tr id="3">
+      <th>SLU</th>
+    </tr>
+    <tr id="4">
+      <th>Wedgewood</th>
+    </tr>
+    <tr id="5">
+      <th>Ballard</th>
+    </tr>
+    <tr id="addrow"></tr>
   </table>
-<script  type ="text/javascript" src="donut.js"></script>
+  <form>
+    <label for "location">Location: </label>
+    <input type = "text" name = "store" placeholder = "Enter Location"></input>
+    <label for "mincus">Minimum # of Customers: </label>
+    <input type = "text" name = "minCus" placeholder = "Minimum Customers"></input>
+    <label for "maxcus">Maximum # of Customers: </label>
+    <input type = "text" name = "maxCus" placeholder = "Maximum Customers"></input>
+    <label for "Average">Average # of Donuts per customer: </label>
+    <input type = "text" name = "average" placeholder = "Average Donuts per customer"></input>
+    <button type="submit">Submit</button>
+    <button id="clear">Clear Table</button>
+<!-- <script type ="text/javascript" src="donut.js"></script> -->
+<!-- <script type ="text/javascript" src='events.js'></script> -->
 </body>
 </html>
