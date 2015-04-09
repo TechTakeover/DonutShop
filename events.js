@@ -8,11 +8,11 @@
 
   var handleTableFormSubmit = function(event) {
     event.preventDefault();
-    var newDonutShop = new DonutShop(event.target.store.value, Number.parseInt(event.target.minCus.value), Number.parseInt(event.target.maxCus.value), Number.parseInt(event.target.average.value));
-    event.target.store.value = null;
+    var newDonutShop = new DonutShop(event.target.minCus.value, Number.parseInt(event.target.maxCus.value), Number.parseInt(event.target.average.value), Number.parseInt(event.target.store .value));
     event.target.minCus.value = null;
     event.target.maxCus.value = null;
     event.target.average.value = null;
+    event.target.store.value = null;
     tabledata.push(newDonutShop);
     renderAllData();
   };
