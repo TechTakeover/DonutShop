@@ -1,4 +1,3 @@
-'use strict';
 (function() {
   var DonutShop = function (minCus, maxCus, average, store, open, close) {
     this.minCus = minCus;
@@ -18,7 +17,7 @@
 
   DonutShop.prototype.donutperday = function() {
   var total=0;
-  for (var i=0; i < this.hoursOpen; i++) {
+  for (var i = 0; i < this.hoursOpen; i++) {
     var dPH = this.donutperhour();
     total += dPH;
     this.hourTotal.push(dPH);
@@ -26,14 +25,13 @@
   };
   return total;
   }
-
   DonutShop.prototype.render = function() {
     var row = document.createElement('tr');
     var data = document.createElement('th');
     var tableName = document.createElement('td');
       data.textContent = this.store;
       row.appendChild(data);
-    for (var i = 0; i < this.hourTotal.length ; i++) {
+    for (var i = 0; i < this.hoursOpen; i++) {
       var ourdata = document.createElement('td');
       ourdata.textContent = this.hourTotal[i];
       row.appendChild(ourdata);
@@ -55,11 +53,12 @@
   tabledata.push(wedgewood);
   tabledata.push(ballard);
   var renderAllData = function() {
-    var tableinfo = document.getElementById("table");
+    var tableinfo = document.getElementById('table');
     tableinfo.innerHTML = "<tr id='hours'> <td>Locations</td> <td>7:00 AM</td> <td>8:00 AM</td> <td>9:00 AM</td> <td>10:00 AM</td> <td>11:00 AM</td> <td>12:00 PM</td> <td>1:00 PM</td> <td>2:00 PM</td> <td>3:00 PM</td> <td>4:00 PM</td> <td>5:00 PM</td> <td>Total</td>";
     tabledata.forEach(function(shop) {
       tableinfo.appendChild(shop.render());
     });
+    return tableinfo;
   };
 
   downtown.donutperday();
@@ -72,4 +71,5 @@
   window.tabledata = tabledata;
   window.renderAllData = renderAllData;
 })();
+
 
