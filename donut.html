@@ -6,10 +6,10 @@
   <link rel="stylesheet" href="donut.css">
 </head>
 <body>
+  <h1>Donut Shop!</h1>
   <table id ="table">
-    <thead>
-      <tr id="hours">
-        <td>Locations</td>
+      <tr>
+        <th>Locations</th>
         <td>7:00 AM</td>
         <td>8:00 AM</td>
         <td>9:00 AM</td>
@@ -22,9 +22,7 @@
         <td>4:00 PM</td>
         <td>5:00 PM</td>
         <td>Total</td>
-    </thead>
-    <tbody id = "table-body">
-    </tbody>
+      </tr>
   </table>
   <form id="form">
     <label for"location">Location: </label>
@@ -37,7 +35,8 @@
     <input type = "text" name = "average" placeholder = "Average Donuts per customer"></input>
     <button type="submit">Submit</button>
     <button id="clear">Clear Table</button>
+  </form>
 <script type ="text/javascript" src="donut.js"></script>
-<script type ="text/javascript" src='events.js'></script>
+<script type ="text/javascript" src="events.js"></script>
 </body>
 </html>
