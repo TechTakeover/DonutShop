@@ -1,26 +1,33 @@
 body {
-  background-color: #2431C8;
+  background-color: #3AF3F2;
 }
 
 table {
-  background-color: #1D27A2;
+  background-color: #84B8D9;
 }
 
 tr {
-  background-color: #ffffff;
-  border: 2px dashed #555555;
+  background-color: #84B8D9;
 }
 
 th {
   background-color: #222EBB;
-  border: 2px dashed #555555;
 }
 
 td {
-  background-color: #1D27A2;
-  border: 2px dashed #555555;
+  background-color: #84B8D9;
+  border: 2px solid #555555;
 }
 
 input {
-  background-color: #1D27A2;
+  background-color: #3AF3F2;
+  border: none;
+  color: #192656;
+}
+
+thead tr {
+  text-shadow: .2px .2px 1px;
+}
+form label{
+box-shadow: .5px .5px .5px .5px;
 }
