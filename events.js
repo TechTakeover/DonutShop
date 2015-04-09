@@ -7,8 +7,6 @@ var DonutShop = window.DonutShop;
 
   var handleTableFormSubmit = function(event) {
     event.preventDefault();
-<<<<<<< HEAD
-    debugger;
 
     var min = Number.parseInt(event.target.minCus.value);
     var max = Number.parseInt(event.target.maxCus.value);
@@ -31,7 +29,6 @@ var DonutShop = window.DonutShop;
     } else {
       console.log('false');
     }
-=======
     var newDonutShop = new DonutShop(event.target.minCus.value, Number.parseInt(event.target.maxCus.value), Number.parseInt(event.target.average.value), Number.parseInt(event.target.store .value));
     event.target.minCus.value = null;
     event.target.maxCus.value = null;
@@ -39,7 +36,6 @@ var DonutShop = window.DonutShop;
     event.target.store.value = null;
     tabledata.push(newDonutShop);
     renderAllData();
->>>>>>> 914f29507db48ce2da2bb92b6197a6be832c4cca
   };
 
   function checkValue(minCus, maxCus) {
