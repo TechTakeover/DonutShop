@@ -7,10 +7,6 @@ table {
   box-shadow: 1px 2em 3em;
 }
 
-h1 {
-  font-family: 'Eater', cursive;
-}
-
 tr {
   background-color: #84B8D9;
 }
@@ -25,6 +21,7 @@ td {
 }
 
 input {
+<<<<<<< HEAD
   background-color: #192656;
   border: 2px solid #000000;
   color: #192656;
@@ -34,6 +31,7 @@ thead tr {
   text-shadow: .2px .2px 1px;
 }
 form{
+<<<<<<< HEAD
   margin-top: 5%;
   margin-left: 3%;
   box-shadow: 1em 1em 3em;

@@ -8,6 +8,7 @@
 
   var handleTableFormSubmit = function(event) {
     event.preventDefault();
+<<<<<<< HEAD
     debugger;
 
     var min = Number.parseInt(event.target.minCus.value);
@@ -31,6 +32,15 @@
     } else {
       console.log('false');
     }
+=======
+    var newDonutShop = new DonutShop(event.target.minCus.value, Number.parseInt(event.target.maxCus.value), Number.parseInt(event.target.average.value), Number.parseInt(event.target.store .value));
+    event.target.minCus.value = null;
+    event.target.maxCus.value = null;
+    event.target.average.value = null;
+    event.target.store.value = null;
+    tabledata.push(newDonutShop);
+    renderAllData();
+>>>>>>> 914f29507db48ce2da2bb92b6197a6be832c4cca
   };
 
   function checkValue(minCus, maxCus) {
