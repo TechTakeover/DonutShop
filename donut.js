@@ -71,5 +71,3 @@
   window.tabledata = tabledata;
   window.renderAllData = renderAllData;
 })();
-
-

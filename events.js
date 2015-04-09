@@ -1,5 +1,4 @@
-
-  var DonutShop = window.DonutShop;
+var DonutShop = window.DonutShop;
   var newRow = document.getElementById('table');
   var newform = document.getElementById('form');
   var clearRow = document.getElementById('clear');
@@ -51,11 +50,4 @@
       }
         return result;
   }
-
-
   newform.addEventListener('submit', handleTableFormSubmit);
-  // clearRow.addEventListener('click', function() {
-  //   newRow.textContent = '';
-  //   renderAllData();
-  // });
-
