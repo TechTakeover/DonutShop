@@ -3,11 +3,21 @@ body {
 }
 
 table {
+  position: relative;
+  margin-left: 4em;
+  margin-top: 10em;
   background-color: #84B8D9;
   box-shadow: 1px 2em 3em;
 }
 
 h1 {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  background-color: #7F88FF;
+  width: 7.5em;
+  border: 5px groove #6997BF;
+  margin-left: 11.5em;
   font-family: 'Eater', cursive;
 }
 
@@ -16,7 +26,7 @@ tr {
 }
 
 th {
-  background-color: #222EBB;
+  background-color: #7F88FF;
 }
 
 td {
@@ -34,15 +44,11 @@ thead tr {
   text-shadow: .2px .2px 1px;
 }
 form {
-  margin-top: 5%;
-  margin-left: 3%;
+  position: fixed;
+  margin-top: 10%;
+  margin-left: 20%;
   box-shadow: 1em 1em 3em;
   border: 1px dashed #000000;
-  width: 50em;
+  width: 37.5em;
   display: block;
 }
-
-.container {
-  content-align: center;
-}
-
