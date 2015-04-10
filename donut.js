@@ -1,4 +1,3 @@
-'use strict';
 (function() {
   var DonutShop = function (minCus, maxCus, average, store, open, close) {
     this.minCus = minCus;
@@ -59,6 +58,7 @@
     tabledata.forEach(function(shop) {
       tableinfo.appendChild(shop.render());
     });
+    return tableinfo;
   };
 
   downtown.donutperday();
@@ -71,4 +71,3 @@
   window.tabledata = tabledata;
   window.renderAllData = renderAllData;
 })();
-
